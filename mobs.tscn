@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk8r6damu4v15"]
+
+[ext_resource type="Texture2D" uid="uid://c1b4lprurybje" path="res://ASSETS/Enemies.png" id="1_85sno"]
+
+[node name="Mobs" type="CharacterBody2D" groups=["Mobs"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_85sno")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-53, -254, -257, -53, -256, 30, -53, 105, 51, 105, 255, 32, 255, -46, 53, -257)

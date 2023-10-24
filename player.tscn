@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://4dabt8bnd4x"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_pha3j"]
+[ext_resource type="Texture2D" uid="uid://w61mipokvfmw" path="res://ASSETS/Untitled.png" id="3_6yjvo"]
+[ext_resource type="PackedScene" uid="uid://b5ofqegr0rim6" path="res://bullet.tscn" id="3_d32d6"]
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_pha3j")
+bullet = ExtResource("3_d32d6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-45, -20, -38, -23, 30, -19, 45, -5, 45, 5, 30, 19, -38, 23, -45, 21, -43, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_6yjvo")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(30, 0)
